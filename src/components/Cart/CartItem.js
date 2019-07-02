@@ -3,7 +3,6 @@ import React from 'react';
 export default function CartItem({item,value}){
     const {id,title,img,price,total,count} = item;
     const {increment,decrement,removeItem} = value;
-
     return (
         <div className="row my-2 text-capitalize text-center">
             <div className="col-10 mx-auto col-lg-2">
@@ -30,7 +29,8 @@ export default function CartItem({item,value}){
                 <div className="cart-icon"><i className="fas fa-trash"></i></div>
             </div>
             <div className="col-10 mx-auto col-lg-2">
-                <strong className="d-lg-none">item total: $ {total}</strong>
+                <strong className="d-lg-none">item total: $ </strong>
+                {total}
             </div>
         </div>
     )
